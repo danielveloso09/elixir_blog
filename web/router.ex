@@ -20,6 +20,8 @@ defmodule Blog.Router do
 
     resources "/posts",  PostController
 
+    resources "/calendar",  CalendarController
+
     resources "/registrations", RegistrationController, only: [:new, :create]
 
     get    "/login",  SessionController, :new

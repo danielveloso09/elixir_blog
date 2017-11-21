@@ -1,5 +1,3 @@
-require IEx
-
 defmodule Blog.User do
   use Blog.Web, :model
 
