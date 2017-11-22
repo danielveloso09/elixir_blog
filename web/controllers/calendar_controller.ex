@@ -1,3 +1,4 @@
+# require IEx
 defmodule Blog.CalendarController do
   use Blog.Web, :controller
 

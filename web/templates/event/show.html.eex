@@ -1,0 +1,28 @@
+<h2>Show event</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @event.title %>
+  </li>
+
+  <li>
+    <strong>Start at:</strong>
+    <%= @event.start_at %>
+  </li>
+
+  <li>
+    <strong>End at:</strong>
+    <%= @event.end_at %>
+  </li>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @event.body %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: event_path(@conn, :edit, @event) %></span>
+<span><%= link "Back", to: event_path(@conn, :index) %></span>

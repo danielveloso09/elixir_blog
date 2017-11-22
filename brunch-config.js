@@ -2,7 +2,7 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: "js/app.js"
+      joinTo: "js/app.js",
 
       // To use a separate vendor.js bundle, specify two files path
       // http://brunch.io/docs/config#-files-
@@ -12,17 +12,19 @@ exports.config = {
       // }
       //
       // To change the order of concatenation of files, explicitly mention here
-      // order: {
-      //   before: [
-      //     "web/static/vendor/js/jquery-2.1.1.js",
-      //     "web/static/vendor/js/bootstrap.min.js"
-      //   ]
-      // }
+      order: {
+        after: [
+          "web/static/vendor/fullcalendar/moment.min.js",
+          "web/static/vendor/fullcalendar/fullcalendar.js",
+          "web/static/vendor/fullcalendar/gcal.js",
+          "web/static/vendor/fullcalendar/locale-all.js"
+        ]
+      }
     },
     stylesheets: {
       joinTo: "css/app.css",
       order: {
-        after: ["web/static/css/app.css"] // concat app.css last
+        after: ["web/static/css/app.css", "web/static/vendor/fullcalendar/fullcalendar.css"] // concat app.css last
       }
     },
     templates: {
@@ -68,6 +70,7 @@ exports.config = {
     globals: {
       $: 'jquery',
       jQuery: 'jquery',
+      bootstrap: 'bootstrap'
     }
   }
 };

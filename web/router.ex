@@ -20,7 +20,8 @@ defmodule Blog.Router do
 
     resources "/posts",  PostController
 
-    resources "/calendar",  CalendarController
+    resources "/calendar",  CalendarController, only: [:index]
+    resources "/events", EventController
 
     resources "/registrations", RegistrationController, only: [:new, :create]
 
